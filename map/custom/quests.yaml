@@ -1,0 +1,21 @@
+---
+kind: Quest
+spec:
+  name: Labyrinth of Trials
+  description: "Welcome to the Labyrinth of Trials."
+  location: [0, 0, 0]
+  tasks:
+    - kind: coord
+      name: Enter the Labryinth
+      location: [0, 0, 0]
+  next: ["Room of Preparation"]
+---
+kind: Quest
+spec:
+  name: Room of Preparation
+  description: "Only the prepared will survive the trials ahead. But greedy hands are not welcome here."
+  location: [10, -4, -6]
+  tasks:
+    - kind: coord
+      name: Enter the room and prepare yourself
+      location: [12, -6, -6]
