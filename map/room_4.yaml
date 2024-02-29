@@ -67,3 +67,9 @@ kind: Building
 spec:
   name: Large Rocks
   location: [13, -14, 1]
+
+---
+kind: Building
+spec:
+  name: Large Rocks
+  location: [11, -10, -1]

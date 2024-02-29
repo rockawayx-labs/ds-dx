@@ -7,7 +7,7 @@ spec:
   model: 02-16
   color: 4
   contract:
-    file: ./IronShrine.sol
+    file: ./../BaseFactory.sol
   plugin:
     file: ./IronShrine.js
   materials:

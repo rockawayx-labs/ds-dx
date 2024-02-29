@@ -13,6 +13,6 @@ using Schema for State;
 
 contract BronzeGate is Gate {
     function getKeyId() internal pure override returns (bytes24) {
-        return 0x6a7a67f02dbcf94f0000000000000005000000010000000a;
+        return 0x6a7a67f02dbcf94f0000000100000005000000010000000a;
     }
 }
