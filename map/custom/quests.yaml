@@ -1,21 +1,65 @@
 ---
 kind: Quest
 spec:
-  name: Labyrinth of Trials
+  name: Enter the Labyrinth of Trials
   description: "Welcome to the Labyrinth of Trials."
   location: [0, 0, 0]
   tasks:
     - kind: coord
-      name: Enter the Labryinth
-      location: [0, 0, 0]
-  next: ["Room of Preparation"]
+      name: Pass the Iron Gate
+      location: [4, 0, -4]
+  next: ["The Room of Passwords"]
 ---
 kind: Quest
 spec:
-  name: Room of Preparation
+  name: The Room of Passwords
+  description: "Hm, could you perhaps guess it?"
+  location: [4, 0, -4]
+  tasks:
+    - kind: coord
+      name: Pass the Bronze Gate
+      location: [10, -4, -6]
+  next: ["The Room of Preparation"]
+---
+kind: Quest
+spec:
+  name: The Room of Preparation
   description: "Only the prepared will survive the trials ahead. But greedy hands are not welcome here."
   location: [10, -4, -6]
   tasks:
     - kind: coord
-      name: Enter the room and prepare yourself
-      location: [12, -6, -6]
+      name: Pass the Gate of Preparation
+      location: [12, -10, -2]
+  next: ["The Room of Paths"]
+---
+kind: Quest
+spec:
+  name: The Room of Paths
+  description: "Oh, the path is blocked! But there might be a way to clear it."
+  location: [12, -10, -2]
+  tasks:
+    - kind: coord
+      name: Clear the Path
+      location: [8, -12, 4]
+  next: ["The Lair of Crusher"]
+---
+kind: Quest
+spec:
+  name: The Lair of Crusher
+  description: "Fear me, for I am the Crusher! (Do I see the his weak spot?)"
+  location: [8, -12, 4]
+  tasks:
+    - kind: coord
+      name: Pass the Bone Gate
+      location: [2, -8, 6]
+  next: ["The Goblin Post Office"]
+---
+kind: Quest
+spec:
+  name: The Goblin Post Office
+  description: "You've got mail! But it's not for you. It's for the the maker of the Labyrinth. Believe me, it was build by a literal greek beaver."
+  location: [2, -8, 6]
+  tasks:
+    - kind: coord
+      name: Pass the Golden Gate
+      location: [4, -6, 2]

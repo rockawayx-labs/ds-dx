@@ -11,3 +11,6 @@
 2. Clone THIS repo with `git clone https://github.com/rockawayx-labs/ds-dx.git`
 3. `ds -k 0x6335c92c05660f35b36148bbfb2105a68dd40275ebf16eff9524d487fb5d57a8 -n local apply -R -f ./map`
 4. You should see our map in the client
+
+You can add cheat bridges for accessing all rooms from the start by
+`ds -k 0x6335c92c05660f35b36148bbfb2105a68dd40275ebf16eff9524d487fb5d57a8 -n local apply -f ./dev-bridges.yaml`

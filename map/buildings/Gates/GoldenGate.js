@@ -1,20 +1,19 @@
 import ds from "downstream";
 
-const keyItemName = "Iron Key";
-const gateName = "Gate of Preparation";
+const keyItemName = "Golden Key";
+const gateName = "Golden Gate";
 
 export default async function update(state) {
     // uncomment this to browse the state object in browser console
     // this will be logged when selecting a unit and then selecting an instance of this building
     // logState(state);
-    const unit = getMobileUnit(state)
-    const bages = state?.world?.bags ?? []
 
     const hasGateKey =
-        getItemBalance(unit, "Dusty Leather Armor", bages) > 0 &&
-        getItemBalance(unit, "Sturdy Wooden Shield", bages) > 0 && 
-        getItemBalance(unit, "Sharp Steel Sword", bages) > 0 &&
-        getTotalBalance(unit, bages) == 3;
+        getItemBalance(
+            getMobileUnit(state),
+            keyItemName,
+            state?.world?.bags ?? [],
+        ) > 0;
 
     const pluginBuildings = getBuildingsByKindName(state, gateName);
     const pluginBuildingTileIDs = pluginBuildings.map(
@@ -51,8 +50,8 @@ export default async function update(state) {
                         html: `
                             <p>${
                                 hasGateKey
-                                    ? "✅ You are prepared."
-                                    : "❌ You must leave all possesions behind and only take what a true warrior needs. A well-maintained weapon, shield and armor."
+                                    ? "✅ You have the right key so you may pass"
+                                    : "❌ You don't have the right key so you cannot pass"
                             }</p>
                             <br/>                            
                         `,
@@ -158,19 +157,6 @@ function getItemBalance(mobileUnit, itemName, worldBags) {
                     ? bagTotal + slot.balance
                     : bagTotal;
             }, 0)
-        );
-    }, 0);
-}
-
-function getTotalBalance(mobileUnit, worldBags) {
-    const selectedUnitBags = mobileUnit
-        ? (worldBags || []).filter(
-              (bag) => bag.equipee?.node?.id === mobileUnit.id,
-          )
-        : [];
-    return selectedUnitBags.reduce((total, bag) => {
-        return (
-            total + bag.slots.reduce((bagTotal, slot) => bagTotal + slot.balance, 0)
         );
     }, 0);
 }

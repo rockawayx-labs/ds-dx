@@ -9,16 +9,15 @@ import {BuildingKind} from "@ds/ext/BuildingKind.sol";
 
 using Schema for State;
 
-contract BlacksmithSecrets is BuildingKind {
-    //TODO: replace it with the hash of the password
-    string constant _PASSWORD = "long live the king";
+abstract contract PasswordFactory is BuildingKind {
+    function getPasswordHash() internal pure virtual returns (bytes32);
 
     function password(string calldata pswd) public {}
 
     function use(Game ds, bytes24 buildingInstance, bytes24, /*actor*/ bytes calldata payload) public override {
         require((bytes4)(payload) == this.password.selector, "Invalid payload");
         (string memory pswd) = abi.decode(payload[4:], (string));
-        require(keccak256(abi.encodePacked(pswd)) == keccak256(abi.encodePacked(_PASSWORD)), "Invalid password");
+        require(keccak256(abi.encodePacked(pswd)) == getPasswordHash(), "Invalid password");
         ds.getDispatcher().dispatch(abi.encodeCall(Actions.CRAFT, (buildingInstance)));
     }
 

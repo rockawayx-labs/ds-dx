@@ -12,18 +12,20 @@ export default async function update(state) {
     // this is a client only check - to enforce it in contracts make
     // similar changes in BasicFactory.sol
     //    && unitIsFriendly(state, selectedBuilding)
-        ;
+    const mobileUnit = getMobileUnit(state);
+    const recipient = mobileUnit?.name?.value || "";
+    const message = recipient !== "" ? `✅ Welcome <b>${recipient}</b>. We can check your mail for a small fee.`: "❌ Who Are You? Plase state your name loud and clear!";
 
-    const craft = (values) => {        
+    const craft = () => {        
         const mobileUnit = getMobileUnit(state);
 
         if (!mobileUnit) {
             console.log('no selected unit');
             return;
-        }
-        const pswd = values['input-password'];
-        console.log('Crafting with password:', pswd);
-        const payload = ds.encodeCall("function password(string pswd)", [pswd]);
+        }                
+        
+        console.log('Delivering to:', recipient.toLowerCase());        
+        const payload = ds.encodeCall("function password(string pswd)", [recipient.toLowerCase()]);
 
         ds.dispatch({
             name: 'BUILDING_USE',
@@ -33,28 +35,23 @@ export default async function update(state) {
         console.log('Craft dispatched');                
     };
 
-    const noop = () => {};
-
     return {
         version: 1,
         components: [
             {
-                id: 'BlacksmithSecrets',
+                id: 'post-office',
                 type: 'building',
                 content: [
                     {
                         id: 'default',
                         type: 'inline',
-                        html: '<p>Fill the input slots and enter password to enable crafing</p>'
-                             +'<p><input id="input-password" type="text" name="input-password"></input></p>',
-                        submit: (values) => {
-                            craft(values);                            
-                        },
+                        
+                        html: `<p>${message}</p><br/>`,
                         buttons: [
                             {
-                                text: 'Craft',
+                                text: 'Check mail',
                                 type: 'action',
-                                action: noop,
+                                action: craft,
                                 disabled: !canCraft,
                             },
                         ],

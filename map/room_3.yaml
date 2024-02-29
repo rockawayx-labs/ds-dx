@@ -10,8 +10,6 @@ spec:
   items:
     - name: Diamond Sword of Life
       quantity: 1
-    - name: Gold Coin
-      quantity: 100
     - name: Dagger of Death
       quantity: 1
     - name: Shield of Power
@@ -25,10 +23,6 @@ spec:
       quantity: 1
     - name: Axe of Destruction
       quantity: 1
-    - name: Diamond
-      quantity: 10
-    - name: Gold Coin
-      quantity: 100
 ---
 kind: Bag
 spec:
@@ -36,12 +30,8 @@ spec:
   items:
     - name: Armor of Stone Skin
       quantity: 1
-    - name: Diamond
-      quantity: 30
     - name: Dusty Leather Armor
       quantity: 1
-    - name: Gold Coin
-      quantity: 100
 ---
 kind: Bag
 spec:
@@ -51,21 +41,13 @@ spec:
       quantity: 1
     - name: Sharp Steel Sword
       quantity: 1
-    - name: Diamond
-      quantity: 20
-    - name: Gold Coin
-      quantity: 100
 ---
 kind: Bag
 spec:
   location: [13, -7, -6]
   items:
-    - name: Diamond
-      quantity: 20
     - name: Legendary Rapiers
       quantity: 1
-    - name: Gold Coin
-      quantity: 50
     - name: Sturdy Wooden Shield
       quantity: 1
 ---
@@ -75,12 +57,8 @@ spec:
   items:
     - name: Shield of the Ancients
       quantity: 1
-    - name: Gold Coin
-      quantity: 70
     - name: Staff of the Ancients
       quantity: 1
-    - name: Diamond
-      quantity: 20
 ---
 kind: Bag
 spec:

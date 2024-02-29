@@ -1,0 +1,32 @@
+---
+kind: Tile
+spec:
+  biome: DISCOVERED
+  location: [3, -3, 0]
+---
+kind: Tile
+spec:
+  biome: DISCOVERED
+  location: [6, -3, -3]
+---
+kind: Tile
+spec:
+  biome: DISCOVERED
+  location: [9, -6, -3]
+
+---
+kind: Tile
+spec:
+  biome: DISCOVERED
+  location: [9, -9, 0]
+
+---
+kind: Tile
+spec:
+  biome: DISCOVERED
+  location: [6, -9, 3]
+---
+kind: Tile
+spec:
+  biome: DISCOVERED
+  location: [0, -3, 3]
