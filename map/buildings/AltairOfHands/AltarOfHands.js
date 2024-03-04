@@ -40,7 +40,7 @@ export default async function update(state) {
                     {
                         id: 'default',
                         type: 'inline',
-                        html: "<p>Free souls of Crusher's victims by returning their hands</p>",
+                        html: "<p>Free the souls of Crusher's victims by returning their hands on the altar!</p>",
                         buttons: [
                             {
                                 text: 'Free them!',

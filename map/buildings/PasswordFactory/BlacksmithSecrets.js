@@ -45,7 +45,7 @@ export default async function update(state) {
                     {
                         id: 'default',
                         type: 'inline',
-                        html: '<p>I used to to wish long life for the queen but now we have a king...</p>'
+                        html: '<p>In flames I roar, in hammers I thrive,<br>Where metals meld, what am I? </p>'
                              +'<p><input id="input-password" type="text" name="input-password"></input></p>',
                         submit: (values) => {
                             craft(values);                            

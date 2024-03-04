@@ -3,7 +3,7 @@ kind: BuildingKind
 spec:
   category: factory
   name: Goblin Post Office
-  description: "Welcome to the Goblin Post Office. Please double check your recipient's name as we ONLY DELIVER TO THE CORRECT RECIPIENT!"
+  description: "Please note that we can only hand over deliveries if your LEGAL NAME matches the recipients name. (HINT: you can change your name by double clicking it in the bottom left corner)"
   model: 09-03
   color: 2
   contract:

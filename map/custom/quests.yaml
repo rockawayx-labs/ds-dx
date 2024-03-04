@@ -1,53 +1,53 @@
 ---
 kind: Quest
 spec:
-  name: Enter the Labyrinth of Trials
-  description: "Welcome to the Labyrinth of Trials."
+  name: The Awakening
+  description: "Lost in a dim dungeon, echoes whisper secrets. Urged forward by hope, each gate promises freedom. Filled with courage, you get up. The first gate awaits."
   location: [0, 0, 0]
   tasks:
     - kind: coord
       name: Pass the Iron Gate
       location: [4, 0, -4]
-  next: ["The Room of Passwords"]
+  next: ["The Room of Riddles"]
 ---
 kind: Quest
 spec:
-  name: The Room of Passwords
-  description: "Hm, could you perhaps guess it?"
+  name: The Room of Riddles
+  description: "\"Seek the blacksmith,\" the whispers say. \"He holds the key.\""
   location: [4, 0, -4]
   tasks:
     - kind: coord
-      name: Pass the Bronze Gate
+      name: Answer the Riddle
       location: [10, -4, -6]
   next: ["The Room of Preparation"]
 ---
 kind: Quest
 spec:
   name: The Room of Preparation
-  description: "Only the prepared will survive the trials ahead. But greedy hands are not welcome here."
+  description: "You you need to leave everything but the essentials behind. Remember that all that glitters ain't gold. True power comes from within. You only need leather, wood and steel."
   location: [10, -4, -6]
   tasks:
     - kind: coord
-      name: Pass the Gate of Preparation
+      name: Equip yourself for future trials
       location: [12, -10, -2]
   next: ["The Room of Paths"]
 ---
 kind: Quest
 spec:
   name: The Room of Paths
-  description: "Oh, the path is blocked! But there might be a way to clear it."
+  description: "There are many obstacles ahead of you. Navigate the path of least resistance to make it through in time."
   location: [12, -10, -2]
   tasks:
     - kind: coord
       name: Clear the Path
-      location: [8, -12, 4]
-  next: ["The Lair of Crusher"]
+      location: [11, -12, 1]
+  next: ["The Lair of The Crusher"]
 ---
 kind: Quest
 spec:
-  name: The Lair of Crusher
-  description: "Fear me, for I am the Crusher! (Do I see the his weak spot?)"
-  location: [8, -12, 4]
+  name: The Lair of The Crusher
+  description: "You must defeat The Crusher to free his previous victims and continue moving forward. Make sure you have a plentiful rest before the battle, and look for his weak spot."
+  location: [11, -12, 1]
   tasks:
     - kind: coord
       name: Pass the Bone Gate
@@ -57,7 +57,7 @@ spec:
 kind: Quest
 spec:
   name: The Goblin Post Office
-  description: "You've got mail! But it's not for you. It's for the the maker of the Labyrinth. Believe me, it was build by a literal greek beaver."
+  description: "There is something you need from the post office. To find the recipient, you must venture outside of this world, to the realms of X. Look for the Labyrinth Keeper."
   location: [2, -8, 6]
   tasks:
     - kind: coord
