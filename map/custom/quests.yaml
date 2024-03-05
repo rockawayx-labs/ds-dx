@@ -1,7 +1,7 @@
 ---
 kind: Quest
 spec:
-  name: The Awakening
+  name: The Labyrinth of Trials - Awakening
   description: "Lost in a dim dungeon, echoes whisper secrets. Urged forward by hope, each gate promises freedom. Filled with courage, you get up. The first gate awaits."
   location: [0, 0, 0]
   tasks:
@@ -13,7 +13,7 @@ spec:
 kind: Quest
 spec:
   name: The Room of Riddles
-  description: "\"Seek the blacksmith,\" the whispers say. \"He holds the key.\""
+  description: '"Seek the blacksmith," the whispers say. "He holds the key."'
   location: [4, 0, -4]
   tasks:
     - kind: coord
@@ -57,7 +57,7 @@ spec:
 kind: Quest
 spec:
   name: The Goblin Post Office
-  description: "There is something you need from the post office. To find the recipient, you must venture outside of this world, to the realms of X. Look for the Labyrinth Keeper."
+  description: 'There is an interesting note pinned to the post office bulletin board. "I'm currently out of office travelling to the realm of the Blue Bird. -- Labyrinth Keeper."'
   location: [2, -8, 6]
   tasks:
     - kind: coord

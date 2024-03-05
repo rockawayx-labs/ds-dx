@@ -3,7 +3,7 @@ kind: BuildingKind
 spec:
   category: factory
   name: Goblin Post Office
-  description: "Please note that we can only hand over deliveries if your LEGAL NAME matches the recipients name. (HINT: you can change your name by double clicking it in the bottom left corner)"
+  description: "Please note that we can only hand over deliveries if your LEGAL NAME matches the recipients name."
   model: 09-03
   color: 2
   contract:

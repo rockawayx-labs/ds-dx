@@ -1,7 +1,7 @@
 kind: BuildingKind
 spec:
   name: The Crusher
-  description: He looks very menacing, but defense is not his strong suite.
+  description: I will crush you with my bare hands!
   category: blocker
   model: enemy
   color: 5
