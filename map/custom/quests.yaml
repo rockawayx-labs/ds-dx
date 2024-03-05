@@ -1,7 +1,7 @@
 ---
 kind: Quest
 spec:
-  name: The Labyrinth of Trials - Awakening
+  name: Awakening
   description: "Lost in a dim dungeon, echoes whisper secrets. Urged forward by hope, each gate promises freedom. Filled with courage, you get up. The first gate awaits."
   location: [0, 0, 0]
   tasks:
