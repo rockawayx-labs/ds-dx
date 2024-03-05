@@ -52,7 +52,7 @@ export default async function update(state) {
                             <p>${
                                 hasGateKey
                                     ? "✅ You are prepared."
-                                    : "❌ You must leave all possesions behind and only take what a true warrior needs. A well-maintained weapon, shield and armor."
+                                    : "❌ You will only be let through fully equiped with a weapon, shield and armor. Be humble."
                             }</p>
                             <br/>                            
                         `,

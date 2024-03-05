@@ -13,6 +13,6 @@ using Schema for State;
 
 contract BlacksmithSecrets is PasswordFactory {
     function getPasswordHash() internal pure override returns (bytes32) {
-        return 0xff8d5aaef5d1f2352a0f17f117cd167af228542216099f0212c11fd78377f61b;
+        return 0xb4f7998b245301fa1dfc784b03961989df486af3dd1e44f88da79ca40cf5125f;
     }
 }

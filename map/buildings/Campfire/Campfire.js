@@ -40,7 +40,7 @@ export default async function update(state) {
                     {
                         id: 'default',
                         type: 'inline',
-                        html: '<p>Resting here may give you strange gifts...</p>',
+                        html: '<p>You feel like the extra goo might come in useful here. Make sure to use up everything you can find.</p>',
                         buttons: [
                             {
                                 text: 'Rest',

@@ -3,7 +3,7 @@ kind: BuildingKind
 spec:
   category: factory
   name: The Core of the Labyrinth
-  description: "Well, well, well. You've made it to the core of the Labyrinth."
+  description: "Well, well, well. Congratulations, hero. You've made it to the core of the Labyrinth. Make a sacrifice to receive a memento of your success."
   model: 05-15
   color: 4
   contract:

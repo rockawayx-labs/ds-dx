@@ -14,7 +14,7 @@ export default async function update(state) {
     //    && unitIsFriendly(state, selectedBuilding)
     const mobileUnit = getMobileUnit(state);
     const recipient = mobileUnit?.name?.value || "";
-    const message = recipient !== "" ? `✅ Welcome <b>${recipient}</b>. We can check your mail for a small fee.`: "❌ Who Are You? Plase state your name loud and clear!";
+    const message = recipient !== "" ? `✅ Welcome <b>${recipient}</b>. You can claim your package for a small fee.`: `❌ Who Are You? Please state your name loud and clear!"!`;
 
     const craft = () => {        
         const mobileUnit = getMobileUnit(state);

@@ -3,7 +3,7 @@ kind: BuildingKind
 spec:
   category: factory
   name: Campfire
-  description: "Not as ordinary campfire as it might seem."
+  description: "Gather around the crackling campfire, its warmth fortifying your defenses against the chill of the night and the might of The Crusher."
   model: 14-02
   color: 3
   contract:

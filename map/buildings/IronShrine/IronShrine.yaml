@@ -3,7 +3,7 @@ kind: BuildingKind
 spec:
   category: factory
   name: Iron Shrine
-  description: "Welcome to the Labyrinth of Trials. "
+  description: "A small shrine, dimly lit with candles."
   model: 02-16
   color: 4
   contract:
