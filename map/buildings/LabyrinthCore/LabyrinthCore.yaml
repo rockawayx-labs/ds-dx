@@ -7,7 +7,7 @@ spec:
   model: 05-15
   color: 4
   contract:
-    file: ./../BaseFactory.sol
+    file: ./LabyrinthCore.sol
   plugin:
     file: ./LabyrinthCore.js
   materials:
@@ -23,12 +23,12 @@ spec:
     - name: Extra Heart
       quantity: 1
   outputs:
-    - name: A Playtest Pass
+    - name: Playtest Pass
       quantity: 1
 ---
 kind: Item
 spec:
-  name: A Playtest Pass
+  name: Playtest Pass
   icon: 26-23
   goo:
     red: 1

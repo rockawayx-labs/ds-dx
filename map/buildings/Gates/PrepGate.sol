@@ -11,9 +11,10 @@ import {BuildingKind} from "@ds/ext/BuildingKind.sol";
 using Schema for State;
 
 contract PrepGate is BuildingKind {
-    bytes24 sword = 0x6a7a67f01df41ea10000000000000001000000010000001e;
-    bytes24 shield = 0x6a7a67f0ab4f7a160000000000000014000000280000000a;
-    bytes24 armor = 0x6a7a67f06a60bb99000000000000001e0000001400000001;
+    bytes24 constant sword = 0x6a7a67f01df41ea10000000000000001000000010000001e;
+    bytes24 constant shield = 0x6a7a67f0ab4f7a160000000000000014000000280000000a;
+    bytes24 constant armor = 0x6a7a67f06a60bb99000000000000001e0000001400000001;
+    bytes24 constant _UNIVERSAL_KEY = 0x6a7a67f0771dac36000000010000004b0000000100000001;
 
     function onUnitArrive(Game ds, bytes24 buildingInstanceID, bytes24 mobileUnitID) public override {
         // Example of logging the last unit to arrive at a building
@@ -36,6 +37,7 @@ contract PrepGate is BuildingKind {
         bool hasSword = false;
         bool hasShield = false;
         bool hasArmor = false;
+        bool hasUniversalKey = false;
         uint64 numItems = 0;
 
         for (uint8 bagSlot = 0; bagSlot < 2; bagSlot++) {
@@ -57,10 +59,13 @@ contract PrepGate is BuildingKind {
                 if (bagItemId == armor) {
                     hasArmor = true;
                 }
+                if (bagItemId == _UNIVERSAL_KEY) {
+                    hasUniversalKey = true;
+                }
                 numItems += balance;
             }
         }
 
-        return hasSword && hasShield && hasArmor && numItems == 3;
+        return (hasSword && hasShield && hasArmor && numItems == 3) || hasUniversalKey;
     }
 }

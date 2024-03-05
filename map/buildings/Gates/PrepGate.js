@@ -7,14 +7,17 @@ export default async function update(state) {
     // uncomment this to browse the state object in browser console
     // this will be logged when selecting a unit and then selecting an instance of this building
     // logState(state);
+    const uniKeyName = "Playtest Pass";
     const unit = getMobileUnit(state)
-    const bages = state?.world?.bags ?? []
+    const bags = state?.world?.bags ?? []
 
     const hasGateKey =
-        getItemBalance(unit, "Dusty Leather Armor", bages) > 0 &&
-        getItemBalance(unit, "Sturdy Wooden Shield", bages) > 0 && 
-        getItemBalance(unit, "Sharp Steel Sword", bages) > 0 &&
-        getTotalBalance(unit, bages) == 3;
+        (
+            getItemBalance(unit, "Dusty Leather Armor", bags) > 0 &&
+            getItemBalance(unit, "Sturdy Wooden Shield", bags) > 0 && 
+            getItemBalance(unit, "Sharp Steel Sword", bags) > 0 &&
+            getTotalBalance(unit, bags) == 3
+        ) || getItemBalance(unit, uniKeyName, bags) > 0;        
 
     const pluginBuildings = getBuildingsByKindName(state, gateName);
     const pluginBuildingTileIDs = pluginBuildings.map(

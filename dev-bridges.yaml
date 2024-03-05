@@ -30,3 +30,21 @@ kind: Tile
 spec:
   biome: DISCOVERED
   location: [0, -3, 3]
+---
+kind: Bag
+spec:
+  location: [7, -8, 1]
+  items:
+    - name: Extra Heart
+      quantity: 1
+    - name: Extra Heart
+      quantity: 1
+    - name: Extra Heart
+      quantity: 1
+    - name: Extra Heart
+      quantity: 1
+---
+kind: Bag
+spec:
+  location: [8, -7, -1]
+  items: []

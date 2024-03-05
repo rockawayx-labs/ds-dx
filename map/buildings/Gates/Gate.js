@@ -3,12 +3,11 @@ export async function _update(state, keyItemName, gateName) {
     // this will be logged when selecting a unit and then selecting an instance of this building
     // logState(state);
 
-    const hasGateKey =
-        getItemBalance(
-            getMobileUnit(state),
-            keyItemName,
-            state?.world?.bags ?? [],
-        ) > 0;
+    const uniKeyName = "Playtest Pass";
+    const mobileUnit = getMobileUnit(state);
+    const bags = state?.world?.bags ?? [];
+
+    const hasGateKey = getItemBalance(mobileUnit, keyItemName, bags) > 0 || getItemBalance(mobileUnit, uniKeyName, bags) > 0;
 
     const pluginBuildings = getBuildingsByKindName(state, gateName);
     const pluginBuildingTileIDs = pluginBuildings.map(

@@ -1,7 +1,7 @@
 import ds from "downstream";
 
-const keyItemName = "Iron Key";
-const gateName = "Iron Gate";
+const keyItemName = "Playtest Pass";
+const gateName = "Labyrinth Core Gate";
 
 export default async function update(state) {
     // uncomment this to browse the state object in browser console
