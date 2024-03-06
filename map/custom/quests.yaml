@@ -40,14 +40,14 @@ spec:
   tasks:
     - kind: coord
       name: Clear the Path
-      location: [11, -12, 1]
+      location: [8, -12, 4]
   next: ["The Lair of The Crusher"]
 ---
 kind: Quest
 spec:
   name: The Lair of The Crusher
   description: "You must defeat The Crusher to free his previous victims and continue moving forward. Make sure you have a plentiful rest before the battle, and look for his weak spot."
-  location: [11, -12, 1]
+  location: [8, -12, 4]
   tasks:
     - kind: coord
       name: Pass the Bone Gate
@@ -57,7 +57,8 @@ spec:
 kind: Quest
 spec:
   name: The Goblin Post Office
-  description: 'There is an interesting note pinned to the post office bulletin board. "I'm currently out of office travelling to the realm of the Blue Bird. -- Labyrinth Keeper."'
+  description: >-
+    There is an interesting note pinned to the post office bulletin board. "I'm currently out of office travelling to the realm of the Blue Bird. -- Labyrinth Keeper."
   location: [2, -8, 6]
   tasks:
     - kind: coord

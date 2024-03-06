@@ -22,5 +22,27 @@ spec:
 ---
 kind: Bag
 spec:
+  location: [0, -8, 8]
+  items:
+    - name: Red Goo
+      quantity: 50
+    - name: Green Goo
+      quantity: 50
+    - name: Blue Goo
+      quantity: 50
+---
+kind: Bag
+spec:
+  location: [-1, -7, 8]
+  items:
+    - name: Red Goo
+      quantity: 50
+    - name: Green Goo
+      quantity: 50
+    - name: Blue Goo
+      quantity: 50
+---
+kind: Bag
+spec:
   location: [2, -7, 5]
   items: []

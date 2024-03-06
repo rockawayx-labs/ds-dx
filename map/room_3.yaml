@@ -74,3 +74,18 @@ kind: Bag
 spec:
   location: [13, -8, -5]
   items: []
+---
+kind: Bag
+spec:
+  location: [12, -4, -8]
+  items: []
+---
+kind: Bag
+spec:
+  location: [13, -5, -8]
+  items: []
+---
+kind: Bag
+spec:
+  location: [14, -6, -8]
+  items: []

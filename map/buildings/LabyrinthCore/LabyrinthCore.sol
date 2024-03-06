@@ -3,15 +3,19 @@ pragma solidity ^0.8.13;
 
 import {Game} from "cog/IGame.sol";
 import {State} from "cog/IState.sol";
-import {Schema} from "@ds/schema/Schema.sol";
+import {Schema, Kind} from "@ds/schema/Schema.sol";
 import {Actions} from "@ds/actions/Actions.sol";
 import {BuildingKind} from "@ds/ext/BuildingKind.sol";
 
 using Schema for State;
 
 contract LabyrinthCore is BuildingKind {
+    // for respawn
     bytes24 constant _LARGE_ROCKS = 0xbe92755c0000000000000000bdcf2b5d0000000000000001;
     bytes24 constant _CRUSHER = 0xbe92755c0000000000000000e92c4edd0000000000000001;
+    bytes24 constant sword = 0x6a7a67f01df41ea10000000000000001000000010000001e;
+    bytes24 constant shield = 0x6a7a67f0ab4f7a160000000000000014000000280000000a;
+    bytes24 constant armor = 0x6a7a67f06a60bb99000000000000001e0000001400000001;
 
     function use(Game ds, bytes24 buildingInstance, bytes24, /*actor*/ bytes memory /*payload*/ ) public override {
         // Crafting the Playtest Pass
@@ -26,7 +30,24 @@ contract LabyrinthCore is BuildingKind {
         //crusher at room 5
         ds.getDispatcher().dispatch(abi.encodeCall(Actions.DEV_SPAWN_BUILDING, (_CRUSHER, 6, -12, 6)));
         //items at room 3
-        //ds.getDispatcher().dispatch(abi.encodeCall(Actions.DEV_SPAWN_BAG, ()
+        int16 q = 14;
+        int16 r = -7;
+        int16 s = -7;
+        bytes24 bagId = bytes24(abi.encodePacked(Kind.Bag.selector, uint96(0), int16(0), q, r, s));
+        bytes24 tileId = bytes24(abi.encodePacked(Kind.Tile.selector, uint96(0), int16(0), q, r, s));
+        bytes24[] memory items = new bytes24[](4);
+        uint64[] memory balances = new uint64[](4);
+        items[0] = sword;
+        items[1] = shield;
+        items[2] = armor;
+        items[3] = bytes24(0);
+        balances[0] = 1;
+        balances[1] = 1;
+        balances[2] = 1;
+        balances[3] = 0;
+        ds.getDispatcher().dispatch(
+            abi.encodeCall(Actions.DEV_SPAWN_BAG, (bagId, address(0), tileId, 0, items, balances))
+        );
     }
 
     // version of use that restricts crafting to building owner, author or allow list
