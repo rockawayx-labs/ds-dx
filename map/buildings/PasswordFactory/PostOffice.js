@@ -14,7 +14,8 @@ export default async function update(state) {
     //    && unitIsFriendly(state, selectedBuilding)
     const mobileUnit = getMobileUnit(state);
     const recipient = mobileUnit?.name?.value || "";
-    const message = recipient !== "" ? `✅ Welcome <b>${recipient}</b>. You can claim your package for a small fee.`: `❌ Who Are You? Please state your name loud and clear!"!`;
+    const keeperMessage = 'Also, there\'s note pinned to the bulletin board: "I\'m out of office travelling to the realm of the Blue Bird. -- Labyrinth Keeper.'
+    const message = recipient !== "" ? `✅ Welcome <b>${recipient}</b>. You can claim your package for a small fee.`: `❌ Who Are You? Please state your name loud and clear!`;
 
     const craft = () => {        
         const mobileUnit = getMobileUnit(state);
@@ -45,8 +46,7 @@ export default async function update(state) {
                     {
                         id: 'default',
                         type: 'inline',
-                        
-                        html: `<p>${message}</p><br/>`,
+                        html: `<p><b>The goblin at the counter says:</b><br/>${message}<hr/>${keeperMessage}</p><br/>`,
                         buttons: [
                             {
                                 text: 'Check mail',
